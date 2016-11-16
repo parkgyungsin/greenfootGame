@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    private int score;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -17,6 +17,9 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(560, 560, 1);
+        GreenfootImage bi = this.getBackground();
+        bi.drawString(""+score,300,30);
+        this.setBackground(bi);
         Crab myCrab;
         myCrab = new Crab();
         addObject( myCrab, 280, 280 );
