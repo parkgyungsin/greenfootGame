@@ -9,10 +9,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Animal extends Actor
 {
     private static final double WALKING_SPEED = 5.0;
+
     public Animal()
     {
+ 
     }
-    
+   
     /**
      * Act - do whatever the Animal wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

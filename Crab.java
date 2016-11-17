@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
  * Write a description of class Crab here.
  * 
@@ -13,12 +12,14 @@ public class Crab extends Animal
      * Act - do whatever the Crab wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    
+    
     public void act() 
     {
         checkKeypress();
         eat();  
     }
-    
+ 
     public void checkKeypress()
     {
         if ( Greenfoot.isKeyDown("left") )
@@ -51,7 +52,12 @@ public class Crab extends Animal
         if ( canSee(Worm.class) )
         {
             eat(Worm.class);
+            World myWorld = getWorld();
+            Space space = (Space)myWorld;
+            Counter counter = space.getCounter();
+            counter.addScore();
             wormsEaten = wormsEaten + 1;
+           
            
             if (wormsEaten % 10 == 0)
             {
@@ -74,4 +80,5 @@ public class Crab extends Animal
         getWorld().addObject( new Worm(), Greenfoot.getRandomNumber(560), Greenfoot.getRandomNumber(560));
         getWorld().addObject( new Lobster(), Greenfoot.getRandomNumber(560), Greenfoot.getRandomNumber(560));
     }
+    
 }
