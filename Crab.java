@@ -41,12 +41,6 @@ public class Crab extends Animal
             turn(-180);
         }
     }
-    public void animateCrab(){
-    if (canSee(Lobster.class))
-        {
-            Greenfoot.stop();
-        }
-    }
      public void eat()
     {
         if ( canSee(Worm.class) )

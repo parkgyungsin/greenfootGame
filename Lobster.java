@@ -31,6 +31,10 @@ public class Lobster extends Animal
     {
         if ( canSee(Crab.class) )
         {
+            World myWorld = getWorld();
+            GameOver gameover = new GameOver();
+            myWorld.addObject(gameover, myWorld.getWidth()/2, myWorld.getHeight()/2);
+            
             Greenfoot.stop();
         }
     }
