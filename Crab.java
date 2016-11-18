@@ -57,8 +57,7 @@ public class Crab extends Animal
             Counter counter = space.getCounter();
             counter.addScore();
             wormsEaten = wormsEaten + 1;
-           
-           
+ 
             if (wormsEaten % 10 == 0)
             {
                 reSpawn();

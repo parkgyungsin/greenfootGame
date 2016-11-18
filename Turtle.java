@@ -8,22 +8,33 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Turtle extends TurtleMove implements Freezable
 {
-    private int counter;
-    public Turtle()
+    private int counter = 100;
+    private int counter_low = 0;
+    public Turtle() 
     {
-        counter = 100;
     }
     public void act() 
     {
-        if( counter <= 0 ){
-        super.act();
-    }
-        else{
-        counter--;
-    }
+        if(counter > 0){
+          counter--;
+          super.act();
+        }
+        
+        else
+        {
+            if(counter_low + counter <= 100)
+            {
+                counter_low++;
+            }
+            else
+            {
+                counter_low = 0;
+                counter = 100;
+            }
+        }
         eat();
     }
-
+    
     public void freeze(int count)
     {
         counter = count;
@@ -34,6 +45,6 @@ public class Turtle extends TurtleMove implements Freezable
         if ( canSee(Lobster.class) )
         {
             eat(Lobster.class);
-        }
+         }
     }
     } 
