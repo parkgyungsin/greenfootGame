@@ -34,7 +34,6 @@ public class Lobster extends Animal
             World myWorld = getWorld();
             GameOver gameover = new GameOver();
             myWorld.addObject(gameover, myWorld.getWidth()/2, myWorld.getHeight()/2);
-            
             Greenfoot.stop();
         }
     }

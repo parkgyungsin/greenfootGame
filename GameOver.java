@@ -10,6 +10,6 @@ public class GameOver extends Actor
 {
     public GameOver()
     {
-        setImage(new GreenfootImage("GameOver", 48, Color.WHITE, Color.BLACK));
+        setImage(new GreenfootImage("GameOver", 100, Color.WHITE, Color.BLACK));
     }
 }

@@ -38,6 +38,8 @@ public class Space extends World
         addObject( new Worm(), Greenfoot.getRandomNumber(493) + 34, Greenfoot.getRandomNumber(501) + 30);
         addObject( new Lobster(), Greenfoot.getRandomNumber(453) + 54, Greenfoot.getRandomNumber(453) + 54);
         addObject( new Turtle(), Greenfoot.getRandomNumber(453) + 54, Greenfoot.getRandomNumber(453) + 54);
-        addObject(counter, 70, 40);
+        addObject(counter, 280, 10);
     }
+   
+    
 }

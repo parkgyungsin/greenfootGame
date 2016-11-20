@@ -9,10 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Animal extends Actor
 {
     private static final double WALKING_SPEED = 5.0;
-
     public Animal()
     {
- 
     }
    
     /**
@@ -60,5 +58,4 @@ public class Animal extends Actor
             getWorld().removeObject(actor);
         }
     }
-    
 }
